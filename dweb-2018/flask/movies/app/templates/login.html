@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <title>Página inicial</title>
+    </head>
+    <body>
+        <form action="login" method="POST">
+            Usuario: <input name="user" type="text" {% if error %}style="border-color: red;"{% endif %}><br/>
+            Senha: <input name="password" type="password"><br/>
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
