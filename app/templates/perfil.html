@@ -6,62 +6,83 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-		<title>perfil</title>
+		<link rel="stylesheet" href="/static/css/bootstrap.css">
+		<title>Perfil</title>
 	</head>
   <body style="background-image: url('https://t4.ftcdn.net/jpg/02/07/42/75/240_F_207427574_wevx9gVTMeWOGjpA9Qt1FC0EXFeRnqPa.jpg');">
 
     <!--padrão para seguir. vomo não posso testar o flesk então não temo herdar por isso eu coloquei manualmente-->
-			<div>
-				<h1 style="background-color: #737B85; padding: 70px 50px; margin-bottom: 10px; color: #FFF; text-align: center; width: 100%; border-radius: 70px;">Bolão</h1>
-      </div>
+			<div style="background-color: #27ae60; padding: 20px 50px; margin-bottom: 10px; color: #FFF; text-align: center; height: 100%; border-radius: 70px;">
+				<div style="text-align: center; margin-top: 0px;">
+					<a href="/"><img src="/static/imagens/bola.png" height="200"></a>
+					<h1>Bolão</h1>
+				</div>
+		    </div>
 
 			<div style="text-align: center;">
-				<p style="text-align: center;border: 2px solid #000; border-radius: 100%; margin: 0 auto; margin-top: 100px ; background-color: #FFF; padding: 70px 70px; width: 70px; height: 70px;">imagen do usuário</p>
-				<h3 style="border: 2px solid #000; background-color: #FFF; color: grey; width: 300px; margin: 20px auto;"><em>nome do usuário</em></h3>
-				<h3 style="border: 2px solid #000; background-color: #FFF; color: grey; width: 300px; margin: 20px auto;"><em>Email do usuário</em></h3>
-				<button type="button" value="alterar dados">alterar dados</button>
+				<div>
+					<img src="/static/imagens/coach.png" class="rounded-circle" style="background-color: #27ae60;" />
+				</div>
+				<h3 style="border: 2px solid #27ae60; background-color: #FFF; color: grey; width: 400px; margin: 20px auto; height: 40px;"><em>{{usuario[0][0]}}</em></h3>
+				<h3 style="border: 2px solid #27ae60; background-color: #FFF; color: grey; width: 400px; margin: 20px auto; height: 40px;"><em>{{usuario[0][1]}}</em></h3>
+				<a href="/alterar-dados"><button type="submit" value="alterar-dados" class="btn btn-success btn-lg">Alterar Dados</button></a>
+				<a href="/criar-bolao"><button type="submit" value="criar-bolao" class="btn btn-success btn-lg">Criar Bolão</button></a>
+				<a href="/sair"><button type="submit" value="sair" class="btn btn-success btn-lg">Sair</button></a>
 			</div>
 
-			<div style="display: inline-block; ">
-				<table style="background-color: #FFF; margin: 100px 70px; float: left;" border="10">
-					<tr>
-							<th colspan="4">Bolões do jogador</th>
-					</tr>
-
-					<tr>
-						<th>Nome</th>
-						<th>Situação</th>
-						<th>Vencedor</th>
-						<th>participantes</th>
-					</tr>
-
-					<tr>
-						<td>nome do bolao</td>
-						<td>ativo, encerrado</td>
-						<td> -, nome do usuario vencedor</td>
-					</tr>
-				</table>
-
-				<table style="background-color: #FFF; margin: 100px 0px;  float: right;" border="10">
-					<tr>
-							 <th colspan="4">Bolões participados</th>
-					</tr>
-
-					<tr>
-						<th>Nome</th>
-						<th>Situação</th>
-						<th>data de termino</th>
-						<th>participantes</th>
-					</tr>
-
-					<tr>
-						<td>nome do bolao</td>
-						<td>data em que se encerra a aposta</td>
-						<td> -, nome do usuario vencedor</td>
-					</tr>
-				</table>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table" style="background: #fff; margin-top: 20px;">
+						  <thead>
+						  	<tr>
+						  		<th scope="col" colspan="5" style="text-align: center; background: #27ae60; color: #fff;">Bolões do Jogador</th>
+						  	</tr>
+						    <tr>
+						      <th scope="col">Nome do Bolão</th>
+						      <th scope="col">Situação</th>
+						      <th scope="col">Vencedor</th>
+						      <th scope="col">Participantes</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">1</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+						      <td>@mdo</td>
+						    </tr>
+						    </tbody>
+						</table>
+				</div>
 			</div>
-
+		</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table" style="background: #fff; margin-top: 20px;">
+						  <thead>
+						  	<tr>
+						  		<th scope="col" colspan="5" style="text-align: center; background: #27ae60; color: #fff;">Bolões Participados</th>
+						  	</tr>
+						    <tr>
+						      <th scope="col">Nome do Bolão</th>
+						      <th scope="col">Situação</th>
+						      <th scope="col">Data de Término</th>
+						      <th scope="col">Participantes</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">1</th>
+						      <td>Mark</td>
+						      <td>Otto</td>
+						      <td>@mdo</td>
+						    </tr>
+						    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 		</body>
 </html>

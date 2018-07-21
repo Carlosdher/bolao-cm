@@ -6,31 +6,76 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-		<title>perfil</title>
+		<link rel="stylesheet" href="/static/css/bootstrap.css">
+		<title>Criar Bolão</title>
 	</head>
   <body style="background-image: url('https://t4.ftcdn.net/jpg/02/07/42/75/240_F_207427574_wevx9gVTMeWOGjpA9Qt1FC0EXFeRnqPa.jpg');">
 
     <!--padrão para seguir. vomo não posso testar o flesk então não tem como herdar por isso eu coloquei manualmente-->
-			<div>
-				<h1 style="background-color: #737B85; padding: 70px 50px; margin-bottom: 10px; color: #FFF; text-align: center; width: 100%; border-radius: 70px;">Bolão</h1>
-      </div>
+			<div style="background-color: #27ae60; padding: 20px 50px; margin-bottom: 10px; color: #FFF; text-align: center; height: 100%; border-radius: 70px;">
+				<div style="text-align: center; margin-top: 0px;">
+					<a href="/"><img src="/static/imagens/bola.png" height="200"></a>
+					<h1>Bolão</h1>
+				</div>
+		    </div>
+		    <div class="container">
+		    	<div class="row">
+		    		<div class="col-md-2"></div>
+		    		<div class="col-md-1">
+		    			<div style="background-color: #27ae60; width: 150%; height: 105%;"></div>
+		    		</div>
+		    		<div class="col-md-6">
+		    			<div style="background-color: #27ae60; width: 105.58%; height: 105%; margin-bottom: 20px;">
+		    			<form method="post">
+							  <div class="form-group">
+							    <label for="nome-do-bolao">Nome do Bolão:</label>
+							    <input type="text" class="form-control" id="nome-do-bolao" aria-describedby="textHelp" placeholder="Informe o nome do bolão">
+							  </div>
+							  <div>
+							  	<label for="time">Times:</label>
+							  	</div>
+							  <div class="form-row">
+							    <div class="col">
+							      <input type="text" class="form-control" placeholder="Time 1">
+							    </div>
+							    <div class="col" style="text-align: center; padding: 5px;">
+							    X
+							    </div>
+							    <div class="col">
+							      <input type="text" class="form-control" placeholder="Time 2">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="valor-minimo">Valor mínimo de aposta:</label>
+							    <input type="text" class="form-control" id="valor-minimo" aria-describedby="textHelp" placeholder="Valor mínimo de aposta">
+							  </div>
+							<div class="form-group">
+							    <label for="data-iniciar">Data Inicial:</label>
+							    <input type="date" class="form-control" id="data-inicial" aria-describedby="textHelp">
+							  </div>
+							  <div class="form-group">
+							    <label for="data-final">Data Final:</label>
+							    <input type="date" class="form-control" id="data-final" aria-describedby="textHelp">
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleFormControlTextarea1">Descrição do Bolão:</label>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descreva seu bolão"></textarea>
+							 </div>
+							 <div style="text-align: right;">
+							 <button type="submit" class="btn btn-success">Criar</button>
+							 </div>
+						</form>
+						</div>
+		    		</div>
+		    		<div class="col-md-1">
+		    			<div style="background-color: #27ae60; width: 100%; height: 105%;"></div>
+		    		</div>
+		    		<div class="col-md-2"></div>
+		    	</div>
+		    </div>
+			<div >
+				
 
-			<div style="background-color: #FFF; display: block; text-align: center; border: 1px solid #000; margin: 50px auto; width: 700px; ">
-				<label style="text-align:left; margin: 20px auto;">Nome do bolão</label>
-				<input style="text-align:left; margin: 20px auto;" type="text" name="nome" required /><br />
-				<label style="text-align:left; margin: 20px auto;">Times:</label>
-				<input style="text-align:left; margin: 20px auto;" type="text" name="time1" /> X
-				<input style="text-align:left; margin: 20px auto;" type="text" name="time2" /><br />
-				<label style="text-align:left; margin: 20px auto;">valor Minimo de aposta:</label>
-				<input style="text-align:left; margin: 20px auto;" type="float" name="valor" /><br />
-				<label style="text-align:left; margin: 20px auto;">dada inicial</label>
-				<input style="text-align:left; margin: 20px auto;" type="date" name="data_inicio" /><br />
-				<label style="text-align:left; margin: 20px auto;">dada final</label>
-				<input style="text-align:left; margin: 20px auto;" type="date" name="data_final" /><br />
-				<label style="text-align:left; margin: 20px auto;"for="descricao">Descrição:</label>
-				<textarea style="text-align:left; margin: 20px auto;" name="descricao" id="descricao" rows="5" cols="60">descricao do bolao</textarea><br />
-				<input style="float: right; margin: 30px auto;" type="submit" name="enviar" value="criarbolao">
 			</div>
 
 	</body>

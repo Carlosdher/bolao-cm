@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href='/static/css/bootstrap.css'>
 		<title>Home</title>
 	</head>
   <body style="background-image: url('https://t4.ftcdn.net/jpg/02/07/42/75/240_F_207427574_wevx9gVTMeWOGjpA9Qt1FC0EXFeRnqPa.jpg');">
 
     <!--padrão para seguir. vomo não posso testar o flesk então não temo herdar por isso eu coloquei manualmente-->
-			<div>
-				<h1 style="background-color: #737B85; padding: 70px 50px; margin-bottom: 10px; color: #FFF; text-align: center; width: 100%; border-radius: 70px;">Bolão</h1>
-				<a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="./login.html"><input style="float: right;  text-align: center;"type="submit" name="entrar" value="Entrar" /></a>
-				<a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="./cadastro.html"><input style="float: right;  text-align: center;"type="submit" name="cadastrar" value="Cadastrar" /></a>
+			<div style="background-color: #27ae60; padding: 20px 50px; margin-bottom: 10px; color: #FFF; text-align: center; height: 100%; border-radius: 70px;">
+				<div style="text-align: center; margin-top: 0px;">
+					<img src="/static/imagens/bola.png" height="200">
+					<h1>Bolão</h1>
+				</div>
+				<div style="text-align: right;">
+					{% if usuario %}
+						<h4>Bem vindo(a), {{usuario}}</h4>
+						<a href="/perfil"><button type="button" class="btn btn-success btn-lg">Perfil</button></a>
+						<a href="/sair"><button type="button" class="btn btn-success btn-lg">Sair</button></a>
+					{% else %}
+						<a href="/login"><button type="button" class="btn btn-success btn-lg">Login</button></a>
+						<a href="/cadastro"><button type="button" class="btn btn-success btn-lg">Cadastro</button></a>
+					{% endif %}
+				</div>
       </div>
 
       <!--codigo dessa página-->
       <div style="display: inline-block;">
-        <h2 style="border: 5px solid #000; float: left; margin: 20px 70px; width: 700px; height: 1000px; background-color: #FFF; border-radius: 70px;  text-align: center;">descrição</h2>
-        <h2 style="border: 5px solid #000; float: left; margin: 20px 70px; width: 300px; height: 1000px; background-color: #FFF; border-radius: 70px; text-align: center;">Resultados</h2>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <h2 style="border: 5px solid #27ae60; float: left; margin: 20px 70px; width: 700px; height: 1000px; background-color: #FFF; border-radius: 70px;  text-align: center;">Bolões em Andamento</h2>
+        <h2 style="border: 5px solid #27ae60; float: left; margin: 20px 70px; width: 300px; height: 1000px; background-color: #FFF; border-radius: 70px; text-align: center;">Descrição</h2>
+    <script src="/static/js/bootstrap.min.js"></script>
   </body>
 </html>
