@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<title>perfil</title>
+	</head>
+  <body style="background-image: url('https://t4.ftcdn.net/jpg/02/07/42/75/240_F_207427574_wevx9gVTMeWOGjpA9Qt1FC0EXFeRnqPa.jpg');">
+
+    <!--padrão para seguir. vomo não posso testar o flesk então não tem como herdar por isso eu coloquei manualmente-->
+			<div>
+				<h1 style="background-color: #737B85; padding: 70px 50px; margin-bottom: 10px; color: #FFF; text-align: center; width: 100%; border-radius: 70px;">Bolão</h1>
+      </div>
+
+			<div style="background-color: #FFF; display: block; text-align: center; border: 1px solid #000; margin: 50px auto; width: 700px; ">
+				<label style="text-align:left; margin: 20px auto;">Nome do bolão</label>
+				<input style="text-align:left; margin: 20px auto;" type="text" name="nome" required /><br />
+				<label style="text-align:left; margin: 20px auto;">Times:</label>
+				<input style="text-align:left; margin: 20px auto;" type="text" name="time1" /> X
+				<input style="text-align:left; margin: 20px auto;" type="text" name="time2" /><br />
+				<label style="text-align:left; margin: 20px auto;">valor Minimo de aposta:</label>
+				<input style="text-align:left; margin: 20px auto;" type="float" name="valor" /><br />
+				<label style="text-align:left; margin: 20px auto;">dada inicial</label>
+				<input style="text-align:left; margin: 20px auto;" type="date" name="data_inicio" /><br />
+				<label style="text-align:left; margin: 20px auto;">dada final</label>
+				<input style="text-align:left; margin: 20px auto;" type="date" name="data_final" /><br />
+				<label style="text-align:left; margin: 20px auto;"for="descricao">Descrição:</label>
+				<textarea style="text-align:left; margin: 20px auto;" name="descricao" id="descricao" rows="5" cols="60">descricao do bolao</textarea><br />
+				<input style="float: right; margin: 30px auto;" type="submit" name="enviar" value="criarbolao">
+			</div>
+
+	</body>
+</html>

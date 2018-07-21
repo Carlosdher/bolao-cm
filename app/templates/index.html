@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+		<title>Home</title>
+	</head>
+  <body style="background-image: url('https://t4.ftcdn.net/jpg/02/07/42/75/240_F_207427574_wevx9gVTMeWOGjpA9Qt1FC0EXFeRnqPa.jpg');">
+
+    <!--padrão para seguir. vomo não posso testar o flesk então não temo herdar por isso eu coloquei manualmente-->
+			<div>
+				<h1 style="background-color: #737B85; padding: 70px 50px; margin-bottom: 10px; color: #FFF; text-align: center; width: 100%; border-radius: 70px;">Bolão</h1>
+				<a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="./login.html"><input style="float: right;  text-align: center;"type="submit" name="entrar" value="Entrar" /></a>
+				<a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="./cadastro.html"><input style="float: right;  text-align: center;"type="submit" name="cadastrar" value="Cadastrar" /></a>
+      </div>
+
+      <!--codigo dessa página-->
+      <div style="display: inline-block;">
+        <h2 style="border: 5px solid #000; float: left; margin: 20px 70px; width: 700px; height: 1000px; background-color: #FFF; border-radius: 70px;  text-align: center;">descrição</h2>
+        <h2 style="border: 5px solid #000; float: left; margin: 20px 70px; width: 300px; height: 1000px; background-color: #FFF; border-radius: 70px; text-align: center;">Resultados</h2>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
