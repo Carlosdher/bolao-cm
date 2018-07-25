@@ -29,16 +29,17 @@
       </div>
 
       <!--codigo dessa página-->
-      <div style="display: inline-block;">
-        {% for x in boloes %}
+      <div style="display: inline-block;">}
         <div style="border: 5px solid #27ae60; float: left; margin: 20px 70px; width: 700px; height: 1000px; background-color: #FFF; border-radius: 70px;  text-align: center;">
         	<h2>Bolões em Andamento</h2>
         	<div style="display: inline;">
-        	<a href="/participar/{{x[2]}}/1">{{x[6]}}</a>
-        	<a href="/participar/{{x[2]}}/2">Aposta anonima</a>
+        		{% for x in boloes %}
+        			<a href="/participar/{{x[2]}}/1">{{x[6]}}</a>
+        			<a href="/participar/{{x[2]}}/2">Aposta anonima</a><br />
+        		{% endfor %}
+        	</div>
         </div>
         </div>
-        {% endfor %}
         <h2 style="border: 5px solid #27ae60; float: left; margin: 20px 70px; width: 300px; height: 1000px; background-color: #FFF; border-radius: 70px; text-align: center;">Descrição</h2>
     <script src="/static/js/bootstrap.min.js"></script>
   </body>
