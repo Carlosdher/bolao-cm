@@ -27,6 +27,7 @@ CREATE TABLE Apostas (
         valor float,
         bolao_aposta integer,
         email_usuario varchar(255),
+        tipo INT NOT NULL,
         PRIMARY KEY (id_aposta),
         FOREIGN KEY (bolao_aposta) REFERENCES Bolao (id_bolao),
         FOREIGN KEY (email_usuario) REFERENCES Usuario (email)

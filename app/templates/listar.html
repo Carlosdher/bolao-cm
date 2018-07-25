@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listar</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>E-mail</th>
+		</tr>
+		{% for x in bolao[11] %}
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{x}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>

@@ -25,7 +25,6 @@
 				</div>
 				<h3 style="border: 2px solid #27ae60; background-color: #FFF; color: grey; width: 400px; margin: 20px auto; height: 40px;"><em>{{usuario[0][0]}}</em></h3>
 				<h3 style="border: 2px solid #27ae60; background-color: #FFF; color: grey; width: 400px; margin: 20px auto; height: 40px;"><em>{{usuario[0][1]}}</em></h3>
-				<a href="/alterar-dados"><button type="submit" value="alterar-dados" class="btn btn-success btn-lg">Alterar Dados</button></a>
 				<a href="/criar-bolao"><button type="submit" value="criar-bolao" class="btn btn-success btn-lg">Criar Bolão</button></a>
 				<a href="/sair"><button type="submit" value="sair" class="btn btn-success btn-lg">Sair</button></a>
 			</div>
@@ -36,7 +35,7 @@
 						<table class="table" style="background: #fff; margin-top: 20px;">
 						  <thead>
 						  	<tr>
-						  		<th scope="col" colspan="5" style="text-align: center; background: #27ae60; color: #fff;">Bolões do Jogador</th>
+						  		<th scope="col" colspan="5" style="text-align: center; background: #27ae60; color: #fff;">Meus Bolões</th>
 						  	</tr>
 						    <tr>
 						      <th scope="col">Nome do Bolão</th>
@@ -46,19 +45,15 @@
 						    </tr>
 						  </thead>
 
-						  {% for listabolao %}
+						  
 						  <tbody>
+						  	{% for x in boloes %}
 						    <tr>
-						      <th scope="row">1</th>
-						      {% if bolao %}
-						      	<td>{{nome_bolao}}</td>
-						      {% endif %}
-
-						      {% if terminar %}
-
-						      <td>{{ terminar }}</td>
-						      <td>@mdo</td>
+						      <th scope="row">{{x[6]}}</th>
+							    <td>{{x[5]}}</td>
+							    <td><a href="/lista-participantes/{{x[2]}}">Listar Participantes</a></td>
 						    </tr>
+						    {% endfor %}
 						    </tbody>
 						</table>
 				</div>
@@ -74,18 +69,20 @@
 						  	</tr>
 						    <tr>
 						      <th scope="col">Nome do Bolão</th>
-						      <th scope="col">Situação</th>
+						      <!--<th scope="col">Situação</th>-->
 						      <th scope="col">Data de Término</th>
-						      <th scope="col">Participantes</th>
+						      <!--<th scope="col">Participantes</th>-->
 						    </tr>
 						  </thead>
 						  <tbody>
+						  	{% for x in meus_boloes %}
 						    <tr>
-						      <th scope="row">1</th>
-						      <td>Mark</td>
-						      <td>Otto</td>
-						      <td>@mdo</td>
+						      <th scope="row">{{ x[6] }}</th>
+						      <!--<td>Mark</td>-->
+						      <td>{{ x[5] }}</td>
+						      <!--<td>@mdo</td>-->
 						    </tr>
+						    {% endfor %}
 						    </tbody>
 						</table>
 					</div>
