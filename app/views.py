@@ -76,8 +76,9 @@ def perfil():
 		meus_boloes = []
 		for x in boloes:
 			print (x[11])
-			if session['name'] in x[11]:
-				meus_boloes.append(x)
+			if x[11] != None:
+				if session['name'] in x[11]:
+					meus_boloes.append(x)
 		print(meus_boloes)
 		return render_template('perfil.html', usuario = usuario, boloes = boloes, meus_boloes = meus_boloes)
 	else:
@@ -94,7 +95,7 @@ def criar_bolao():
 		datafim = request.form['datafim']
 		descricao = request.form['descricao']
 		cur = g.db.cursor(cursor_factory=psycopg2.extras.DictCursor)
-		query = "INSERT INTO bolao (time1, time2, email_usuario, data_inicio, data_fim, nome, descricao, valor_minimo) VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}', {})".format(time1, time2, session['name'], datainicio, datafim, nome, descricao, valor)
+		query = ("INSERT INTO bolao (time1, time2, email_usuario, data_inicio, data_fim, nome, descricao, valor_minimo) VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}', {})".format(time1, time2, session['name'], datainicio, datafim, nome, descricao, valor))
 		cur.execute(query)
 		g.db.commit()
 		return redirect(url_for('perfil'))
